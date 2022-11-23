@@ -6,6 +6,11 @@ import Starters from "./components/Starters";
 import Pasta from "./components/Pasta";
 import Dessert from "./components/Dessert";
 import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./components/Homepage";
+import Startersrecipe from "./components/Startersrecipe";
+import Pastarecipe from "./components/Pastarecipe";
+import Dessertsrecipe from "./components/Dessertsrecipe";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -39,6 +44,22 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/starters" element={<Starters starters={starters} />} />
+        <Route path="/pasta" element={<Pasta pasta={pasta} />} />
+        <Route path="/desserts" element={<Dessert dessert={dessert} />} />
+        <Route
+          path="/starters/:id"
+          element={<Startersrecipe starters={starters} />}
+        />
+        <Route path="/pasta/:id" element={<Pastarecipe pasta={pasta} />} />
+        <Route
+          path="/desserts/:id"
+          element={<Dessertsrecipe dessert={dessert} />}
+        />
+      </Routes>
       <Navbar />
     </div>
   );
