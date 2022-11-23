@@ -1,14 +1,46 @@
 import "./navbar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <h1 className="navbar-title">Cookbook</h1>
-      <NavLink to="/">Homepage</NavLink>
-      <NavLink to="/starters">Starters</NavLink>
-      <NavLink to="/pasta">Pasta</NavLink>
-      <NavLink to="/desserts">Dessert</NavLink>
+      <NavLink to="/">
+        <h1 className="navbar-title">Nonna's Cookbook</h1>
+      </NavLink>
+      <div className="navbar-links">
+        <NavLink
+          to="/"
+          activeStyle={{
+            fontWeight: "bold",
+          }}
+        >
+          Homepage
+        </NavLink>
+        <NavLink
+          to="/starters"
+          activeStyle={{
+            fontWeight: "bold",
+          }}
+        >
+          Starters
+        </NavLink>
+        <NavLink
+          to="/pasta"
+          activeStyle={{
+            fontWeight: "bold",
+          }}
+        >
+          Pasta
+        </NavLink>
+        <NavLink
+          to="/desserts"
+          activeStyle={{
+            fontWeight: "bold",
+          }}
+        >
+          Dessert
+        </NavLink>
+      </div>
     </nav>
   );
 }
