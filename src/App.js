@@ -60,7 +60,7 @@ function App() {
           element={<Dessertsrecipe dessert={dessert} />}
         />
       </Routes>
-      <Navbar />
+      <Footer />
     </div>
   );
 }
