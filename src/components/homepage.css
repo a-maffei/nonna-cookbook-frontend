@@ -3,19 +3,19 @@
   margin: 0 auto;
 }
 
-.homepage-title,
-.homepage-subtitle {
+.main-title,
+.main-subtitle {
   text-align: center;
   color: #303841;
 }
 
-.homepage-title {
+.main-title {
   font-family: "Pacifico", cursive;
   font-size: 1.8em;
   margin: 1em auto 0.8em;
 }
 
-.homepage-subtitle {
+.main-subtitle {
   margin-bottom: 1em;
 }
 

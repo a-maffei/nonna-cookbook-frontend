@@ -7,6 +7,18 @@
   font-family: "Roboto", sans-serif;
 }
 
+.main-title,
+.main-subtitle {
+  text-align: center;
+  color: #303841;
+}
+
+.main-title {
+  font-family: "Pacifico", cursive;
+  font-size: 1.8em;
+  margin: 1em auto 0.8em;
+}
+
 .bttn-intro {
   text-align: center;
   padding-top: 1.3em;
@@ -32,4 +44,9 @@
   border-radius: 10px;
   text-transform: uppercase;
   font-weight: 00;
+}
+
+.nav-bttn:hover {
+  color: white;
+  background-color: #303841;
 }

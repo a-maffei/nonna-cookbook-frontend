@@ -1,0 +1,11 @@
+.error {
+  width: 80%;
+  margin: auto;
+}
+
+.nonnas-image {
+  width: 40%;
+  margin: 1em auto;
+  display: block;
+  border-radius: 3%;
+}

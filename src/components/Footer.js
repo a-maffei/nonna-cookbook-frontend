@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="footer">
       <p className="footer-text">
-        Made with hunger by Alessandra, Antonio and Armin{" "}
+        Made with React & hunger by Alessandra, Antonio and Armin{" "}
         <FaPizzaSlice className="footer-icon" />
       </p>
     </div>

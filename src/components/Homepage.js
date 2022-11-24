@@ -9,8 +9,8 @@ import { FaPizzaSlice } from "react-icons/fa";
 export default function Homepage() {
   return (
     <div className="homepage">
-      <h2 className="homepage-title">What would you like to cook today?</h2>
-      <p className="homepage-subtitle">
+      <h2 className="main-title">What would you like to cook today?</h2>
+      <p className="main-subtitle">
         Browse through Nonna's favorite recipes and get inspired.{" "}
       </p>
       <div className="homepage-pizzas">
