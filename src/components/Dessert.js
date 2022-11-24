@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./category.css";
 
 export default function Dessert({ dessert }) {
   return (
     <div>
+      <h1 category-title>Dessert</h1>
       {dessert &&
         dessert.map((recipe, key) => (
           <div>

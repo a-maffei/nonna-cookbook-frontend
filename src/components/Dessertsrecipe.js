@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
+//import ReactMarkdown from "react-markdown";
 
 export default function Dessertsrecipe({ dessert }) {
   const { id } = useParams();
@@ -18,9 +18,9 @@ export default function Dessertsrecipe({ dessert }) {
         style={{ width: "400px" }}
         alt={oneDessert.fields.title}
       />
-      <ReactMarkdown>{oneDessert.fields.ingredients}</ReactMarkdown>
+      {/* <ReactMarkdown>{oneDessert.fields.ingredients}</ReactMarkdown>
       <br />
-      <ReactMarkdown>{oneDessert.fields.instructions}</ReactMarkdown>
+      <ReactMarkdown>{oneDessert.fields.instructions}</ReactMarkdown> */}
 
       <button onClick={() => navigate("/desserts")}>
         Show me all the desserts

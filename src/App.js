@@ -11,6 +11,7 @@ import Homepage from "./components/Homepage";
 import Startersrecipe from "./components/Startersrecipe";
 import Pastarecipe from "./components/Pastarecipe";
 import Dessertsrecipe from "./components/Dessertsrecipe";
+import ErrorPage from "./components/ErrorPage";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -59,6 +60,7 @@ function App() {
           path="/desserts/:id"
           element={<Dessertsrecipe dessert={dessert} />}
         />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </div>

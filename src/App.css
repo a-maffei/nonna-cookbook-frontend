@@ -1,5 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500&family=Pacifico&family=Roboto:wght@100;300;400;500;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.main-title,
+.main-subtitle {
+  text-align: center;
+  color: #303841;
+}
+
+.main-title {
+  font-family: "Pacifico", cursive;
+  font-size: 1.8em;
+  margin: 1em auto 0.8em;
+}
+
+.bttn-intro {
+  text-align: center;
+  padding-top: 1.3em;
+  color: #303841;
+  font-family: "Pacifico", cursive;
+  font-size: 1.5em;
+}
+
+.bttn-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.nav-bttn {
+  color: #303841;
+  border: 1px solid #303841;
+  background-color: white;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  margin: 1.3em auto;
+  padding: 1em;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 00;
+}
+
+.nav-bttn:hover {
+  color: white;
+  background-color: #303841;
 }
