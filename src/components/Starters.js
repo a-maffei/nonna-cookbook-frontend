@@ -24,11 +24,15 @@ export default function Starters({ starters }) {
                   {" "}
                   {recipe.fields.title}{" "}
                 </h3>
-
-                <img
-                  src={recipe.fields.image.fields.file.url}
-                  className="category-recipe-img"
-                />
+                <div className="category-overlay-cont">
+                  <img
+                    src={recipe.fields.image.fields.file.url}
+                    className="category-recipe-img"
+                  />
+                  <div className="category-overlay">
+                    <p className="category-overlay-text">Discover the recipe</p>
+                  </div>
+                </div>
               </Link>
             </div>
           ))}
