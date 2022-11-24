@@ -2,7 +2,7 @@
 
 .footer {
   width: 100%;
-  background-color: #be3144;
+  background-color: #9a0101;
   display: inline-flex;
   align-items: center;
   justify-content: space-around;
@@ -37,7 +37,7 @@
 }
 
 .footer-button {
-  background-color: rgb(69, 93, 71);
+  background-color: #d3d6db;
   border: none;
   padding: 10px 20px;
   border-radius: 10px;

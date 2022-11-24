@@ -1,8 +1,15 @@
+.recipe-macro-container {
+  width: 90%;
+  background-color: white;
+  margin: 0 auto;
+  padding: 2% 0;
+}
+
 .recipe {
-  border: 1px dotted #be3144;
+  border: 1px solid #9a0101;
   width: 60%;
-  margin: 2% auto;
-  padding: 0 3% 2%;
+  margin: 0 auto;
+  padding-bottom: 2%;
 }
 
 .recipe-title {
@@ -36,6 +43,6 @@
 .recipe-vegetarian {
   display: inline-block;
   font-weight: 200;
-  color: #be3144;
+  color: #9a0101;
   margin-left: 2%;
 }
