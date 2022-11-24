@@ -6,8 +6,24 @@ import Cloth from "../images/tablecloth.jpg";
 import { Link } from "react-router-dom";
 import "./homepage.css";
 import { FaPizzaSlice } from "react-icons/fa";
+import { useState, useEffect } from "react";
+export default function Homepage({ recipes }) {
+  const [inputText, setInputText] = useState("");
+  const [matchingRecipes, setMatchingRecipes] = useState([]);
+  const [query, setQuery] = useState("");
 
-export default function Homepage() {
+  const inputHandler = (e, query) => {
+    e.preventDefault();
+    const lowerCase = query.toLowerCase();
+    setMatchingRecipes(
+      recipes.filter((recipe) =>
+        recipe.fields.title.toLowerCase().includes(lowerCase)
+      )
+    );
+    console.log(matchingRecipes);
+    setInputText("");
+  };
+
   return (
     <div
       className="background"
@@ -18,6 +34,39 @@ export default function Homepage() {
         <p className="main-subtitle">
           Browse through Nonna's favorite recipes and get inspired.{" "}
         </p>
+        <form
+          onSubmit={(e) => {
+            inputHandler(e, query);
+          }}
+        >
+          <input
+            className="homepage-searchbar"
+            type="text"
+            value={inputText}
+            onChange={(e) => {
+              setInputText(e.target.value);
+              setQuery(e.target.value);
+              return console.log(query);
+            }}
+          ></input>
+          <button className="homepage-searchbar" type="submit">
+            Search
+          </button>
+        </form>
+        {inputText.length === 0 ? (
+          <div>
+            {matchingRecipes.map((recipe) => (
+              <Link
+                to={`/${recipe.fields.type}/${recipe.fields.nameId}`}
+                style={{ textDecoration: "none" }}
+              >
+                <h1>{recipe.fields.title}</h1>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <></>
+        )}
         <div className="homepage-pizzas">
           <span className="homepage-icon">
             <FaPizzaSlice className="spinner rotate" />

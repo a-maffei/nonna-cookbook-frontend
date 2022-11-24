@@ -38,7 +38,7 @@ export default function Navbar() {
             fontWeight: "bold",
           }}
         >
-          Desserts
+          Dessert
         </NavLink>
       </div>
     </nav>

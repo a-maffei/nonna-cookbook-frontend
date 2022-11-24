@@ -2,6 +2,7 @@
   width: 90%;
   margin: 0 auto;
   background: white;
+  padding: 1% 0 3%;
 }
 
 .main-title {
@@ -11,6 +12,31 @@
 
 .main-subtitle {
   margin-bottom: 1em;
+}
+
+form {
+  width: 40%;
+  margin: 2em auto;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  display: block;
+  padding: 1.5%;
+  width: 60%;
+  border: #303841 1px solid;
+}
+
+button {
+  display: block;
+  padding: 1.5%;
+  color: #d3d6db;
+  background-color: #303841;
+  border: none;
+  margin-left: 1%;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .homepage-cat-con {
