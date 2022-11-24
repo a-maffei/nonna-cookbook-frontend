@@ -11,7 +11,7 @@ export default function Starters({ starters }) {
   return (
     <div>
       <h2 className="category-title">Starters</h2>
-      <p>Deep-fried heaven.</p>
+      <p>Nonna says you'll be needing a lot of oil.</p>
       <div className="category-container">
         {starters &&
           starters.map((recipe, key) => (

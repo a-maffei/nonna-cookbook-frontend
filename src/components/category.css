@@ -17,7 +17,6 @@ p {
   margin: 1.5em auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 2%;
 }
 
@@ -28,11 +27,11 @@ p {
   border: 1px solid #be3144;
 }
 
-h3,
-h3:active,
-h3:link,
-h3:hover,
-h3:visited {
+.category-recipe-title,
+.category-recipe-title:active,
+.category-recipe-title:link,
+.category-recipe-title:hover,
+.category-recipe-title:visited {
   width: 100%;
   cursor: pointer;
   text-decoration: none !important;
@@ -52,4 +51,19 @@ h3:hover {
   width: 100%;
   margin: 1% auto 0;
   cursor: pointer;
+}
+
+@media (max-width: 1250px) {
+  .category-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .category-container {
+    grid-template-columns: 1fr;
+  }
+  .category-recipe-container p {
+    width: 70%;
+  }
 }

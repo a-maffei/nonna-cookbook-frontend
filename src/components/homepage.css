@@ -3,18 +3,6 @@
   margin: 0 auto;
 }
 
-.main-title,
-.main-subtitle {
-  text-align: center;
-  color: #303841;
-}
-
-.main-title {
-  font-family: "Pacifico", cursive;
-  font-size: 1.8em;
-  margin: 1em auto 0.8em;
-}
-
 .main-subtitle {
   margin-bottom: 1em;
 }
@@ -24,6 +12,8 @@
   flex-direction: column;
   width: 60%;
   margin: 0 auto 1.5em;
+  border: #be3144 1px dotted;
+  padding: 1% 2%;
 }
 
 .homepage-cat-title,
@@ -36,6 +26,7 @@
   font-family: "Pacifico", cursive;
   color: #be3144;
   text-align: center;
+  margin-top: 0;
 }
 
 .homepage-pizzas {
@@ -87,4 +78,5 @@
   display: inline-block;
   height: 2em;
   color: #be3144;
+  margin-bottom: 1.5em;
 }
