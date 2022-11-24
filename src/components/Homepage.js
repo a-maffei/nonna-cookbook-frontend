@@ -49,7 +49,7 @@ export default function Homepage({ recipes }) {
               return console.log(query);
             }}
           ></input>
-          <button className="homepage-searchbar" type="submit">
+          <button className="homepage-button" type="submit">
             Search
           </button>
         </form>

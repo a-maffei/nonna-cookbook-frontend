@@ -21,14 +21,14 @@ form {
   justify-content: center;
 }
 
-input {
+.homepage-searchbar {
   display: block;
   padding: 1.5%;
   width: 60%;
   border: #303841 1px solid;
 }
 
-button {
+.homepage-button {
   display: block;
   padding: 1.5%;
   color: #d3d6db;
