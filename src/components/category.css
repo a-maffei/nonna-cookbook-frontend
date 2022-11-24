@@ -1,0 +1,55 @@
+h2 {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: "Pacifico", cursive;
+  color: #be3144;
+  margin: 0.5em auto;
+}
+
+p {
+  color: #303841;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.category-container {
+  width: 80%;
+  margin: 1.5em auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2%;
+}
+
+.category-recipe-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  border: 1px solid #be3144;
+}
+
+h3,
+h3:active,
+h3:link,
+h3:hover,
+h3:visited {
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none !important;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  color: #303841;
+  text-align: center;
+  padding: 0.5em;
+}
+
+h3:hover {
+  font-weight: bold;
+}
+
+.category-recipe-img {
+  width: 100%;
+  margin: 1% auto 0;
+  cursor: pointer;
+}
