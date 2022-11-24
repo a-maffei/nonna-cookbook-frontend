@@ -51,7 +51,7 @@ export default function Homepage() {
           </div>
         </Link>
 
-        <Link to="/dessert" style={{ textDecoration: "none" }}>
+        <Link to="/desserts" style={{ textDecoration: "none" }}>
           <div className="homepage-cat-con">
             <div className="homepage-cat-title-con">
               <h2 className="homepage-cat-title">Desserts</h2>
