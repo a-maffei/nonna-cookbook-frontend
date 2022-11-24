@@ -30,11 +30,14 @@ export default function Homepage() {
             <div className="homepage-cat-title-con">
               <h2 className="homepage-cat-title">Starters</h2>
             </div>
-            <img
-              className="homepage-cat-image"
-              src={Starter}
-              style={{ width: "100%" }}
-            />
+            <div className="homepage-overlay">
+              <img className="homepage-cat-image" src={Starter} />
+              <div className="homepage-cat-overlay">
+                <p className="homepage-overlay-text">
+                  Discover Nonna's favorite starters
+                </p>
+              </div>
+            </div>
           </div>
         </Link>
 
@@ -43,11 +46,14 @@ export default function Homepage() {
             <div className="homepage-cat-title-con">
               <h2 className="homepage-cat-title">Pasta</h2>
             </div>
-            <img
-              className="homepage-cat-image"
-              src={Pasta}
-              style={{ width: "100%" }}
-            />
+            <div className="homepage-overlay">
+              <img className="homepage-cat-image" src={Pasta} />
+              <div className="homepage-cat-overlay">
+                <p className="homepage-overlay-text">
+                  Discover Nonna's favorite pasta dishes
+                </p>
+              </div>
+            </div>{" "}
           </div>
         </Link>
 
@@ -56,11 +62,14 @@ export default function Homepage() {
             <div className="homepage-cat-title-con">
               <h2 className="homepage-cat-title">Desserts</h2>
             </div>
-            <img
-              src={Dessert}
-              style={{ width: "100%" }}
-              className="homepage-cat-image"
-            />
+            <div className="homepage-overlay">
+              <img className="homepage-cat-image" src={Dessert} />
+              <div className="homepage-cat-overlay">
+                <p className="homepage-overlay-text">
+                  Discover Nonna's favorite desserts
+                </p>
+              </div>
+            </div>
           </div>
         </Link>
       </div>
