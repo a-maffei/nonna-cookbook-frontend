@@ -54,7 +54,7 @@ export default function Homepage() {
         <Link to="/dessert" style={{ textDecoration: "none" }}>
           <div className="homepage-cat-con">
             <div className="homepage-cat-title-con">
-              <h2 className="homepage-cat-title">Dessert</h2>
+              <h2 className="homepage-cat-title">Desserts</h2>
             </div>
             <img
               src={Dessert}
