@@ -16,7 +16,6 @@
 .main-title {
   font-family: "Pacifico", cursive;
   font-size: 1.8em;
-  margin: 1em auto 0.8em;
 }
 
 .bttn-intro {
@@ -29,7 +28,8 @@
 
 .bttn-container {
   width: 70%;
-  margin: 0 auto 2em;
+  margin: 0 auto;
+  padding: 1em 0 2em;
 }
 
 .nav-bttn {
@@ -39,7 +39,7 @@
   cursor: pointer;
   text-align: center;
   display: block;
-  margin: 1.3em auto;
+  margin: 1.3em auto 0;
   padding: 1em;
   border-radius: 10px;
   text-transform: uppercase;
