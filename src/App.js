@@ -44,7 +44,15 @@ function App() {
   console.log(dessert);
 
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        backgroundImage: `url(https://img.freepik.com/premium-photo/cutlery-black-stone-table-with-vegetables-spices-food-background-top-view-rustic-style_187166-3961.jpg?w=2000)`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
