@@ -1,6 +1,8 @@
 .error {
-  width: 80%;
+  width: 90%;
+  background-color: white;
   margin: auto;
+  padding: 0 0 4%;
 }
 
 .nonnas-image {

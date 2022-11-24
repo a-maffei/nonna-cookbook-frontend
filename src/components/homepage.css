@@ -1,6 +1,12 @@
 .homepage {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
+  background: white;
+}
+
+.main-title {
+  margin-top: 0;
+  padding-top: 1em;
 }
 
 .main-subtitle {
@@ -10,9 +16,9 @@
 .homepage-cat-con {
   display: flex;
   flex-direction: column;
-  width: 60%;
-  margin: 0 auto 1.5em;
-  border: #be3144 1px dotted;
+  width: 50%;
+  margin: 2% auto 0;
+  border: #9a0101 1px solid;
   padding: 1% 2%;
 }
 
@@ -24,7 +30,7 @@
   font-size: 2em;
   cursor: pointer;
   font-family: "Pacifico", cursive;
-  color: #be3144;
+  color: #9a0101;
   text-align: center;
   margin-top: 0;
 }
@@ -98,6 +104,11 @@
 .spinner {
   display: inline-block;
   height: 2em;
-  color: #be3144;
-  margin-bottom: 1.5em;
+  color: #9a0101;
+}
+
+@media (max-width: 750px) {
+  .homepage-cat-con {
+    width: 80%;
+  }
 }
