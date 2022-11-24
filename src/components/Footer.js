@@ -28,17 +28,33 @@ export default function Footer() {
       <div className="social-icons">
         <h5>Connect with us</h5>
         <div className="icons">
-          <a href="https://de-de.facebook.com/ " target="_blank">
+          <a
+            className="social-icon"
+            href="https://de-de.facebook.com/ "
+            target="_blank"
+          >
             <FaFacebook />
           </a>
-          <a href="https://twitter.com/i/flow/login" target="_blank">
+          <a
+            className="social-icon"
+            href="https://twitter.com/i/flow/login"
+            target="_blank"
+          >
             <AiFillInstagram />
           </a>
-          <a href="https://www.instagram.com/" target="_blank">
+          <a
+            className="social-icon"
+            href="https://www.instagram.com/"
+            target="_blank"
+          >
             {" "}
             <AiFillTwitterCircle />
           </a>
-          <a href="https://www.linkedin.com/" target="_blank">
+          <a
+            className="social-icon"
+            href="https://www.linkedin.com/"
+            target="_blank"
+          >
             <AiFillLinkedin />
           </a>
         </div>

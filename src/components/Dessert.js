@@ -14,7 +14,7 @@ export default function Dessert({ dessert }) {
       <div className="category-container">
         {dessert &&
           dessert.map((recipe, key) => (
-            <div className="category-recipe-container">
+            <div className="category-recipe-container" key={key}>
               <Link
                 to={`/desserts/${recipe.fields.nameId}`}
                 style={{ textDecoration: "none" }}

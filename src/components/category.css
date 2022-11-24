@@ -43,7 +43,7 @@ p {
   padding: 0.5em;
 }
 
-h3:hover {
+.category-recipe-title:hover {
   font-weight: bold;
 }
 

@@ -15,7 +15,7 @@ export default function Starters({ starters }) {
       <div className="category-container">
         {starters &&
           starters.map((recipe, key) => (
-            <div className="category-recipe-container">
+            <div className="category-recipe-container" key={key}>
               <Link
                 to={`/starters/${recipe.fields.nameId}`}
                 style={{ textDecoration: "none" }}

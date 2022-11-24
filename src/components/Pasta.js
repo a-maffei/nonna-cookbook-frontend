@@ -15,7 +15,7 @@ export default function Pasta({ pasta }) {
       <div className="category-container">
         {pasta &&
           pasta.map((recipe, key) => (
-            <div className="category-recipe-container">
+            <div className="category-recipe-container" key={key}>
               <Link
                 to={`/pasta/${recipe.fields.nameId}`}
                 style={{ textDecoration: "none" }}

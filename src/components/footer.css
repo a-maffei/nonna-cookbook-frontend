@@ -2,21 +2,23 @@
 
 .footer {
   width: 100%;
-  height: 85px;
   background-color: #be3144;
   display: inline-flex;
   align-items: center;
   justify-content: space-around;
+  padding-bottom: 0;
 }
+
 .footer p {
   color: #d3d6db;
   padding: 2% 0;
   font-size: 0.8em;
-  font-family: "Pacifico", cursive;
 }
 
 .footer h5 {
   font-family: "Pacifico", cursive;
+  padding-top: 2%;
+  color: #d3d6db;
 }
 
 .footer-input {
@@ -25,11 +27,13 @@
   color: gray;
   font-size: 18px;
   border: none;
+  margin-bottom: 4%;
+  margin-right: 8px;
 }
 .footer-text {
   position: absolute;
   text-align: center;
-  padding-top: 50px;
+  margin-top: 50px;
 }
 
 .footer-button {
@@ -39,8 +43,9 @@
   border-radius: 10px;
   text-align: center;
   font-size: 17px;
-  margin-left: 5px;
+  margin-bottom: 4%;
 }
+
 .footer-button:hover {
   cursor: pointer;
   border-width: 5px;
@@ -51,6 +56,10 @@
 .social-icons {
   font-size: 25px;
   margin-left: 600px;
+}
+
+.social-icon {
+  color: #303841;
 }
 
 .latestNews {
