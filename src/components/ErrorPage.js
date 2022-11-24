@@ -20,3 +20,6 @@ export default function ErrorPage() {
     </div>
   );
 }
+
+
+
