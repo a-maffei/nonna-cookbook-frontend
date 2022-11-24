@@ -1,0 +1,41 @@
+.recipe {
+  border: 1px dotted #be3144;
+  width: 60%;
+  margin: 2% auto;
+  padding: 0 3% 2%;
+}
+
+.recipe-title {
+  text-align: center;
+  color: #303841;
+  font-family: "Pacifico", cursive;
+  margin: 2% auto;
+  font-size: 3em;
+}
+
+.recipe-image {
+  display: block;
+  margin: 0 auto 2em;
+  width: 50%;
+  border-radius: 2%;
+}
+
+.recipe-text {
+  line-height: 1.8;
+  width: 80%;
+  margin: 0 auto;
+  color: #303841;
+}
+
+.recipe-image {
+  display: block;
+  margin: 0 auto 2em;
+  border-radius: 2%;
+}
+
+.recipe-vegetarian {
+  display: inline-block;
+  font-weight: 200;
+  color: #be3144;
+  margin-left: 2%;
+}

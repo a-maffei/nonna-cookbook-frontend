@@ -1,6 +1,8 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+import "./recipe.css";
+
 export default function Pastarecipe({ pasta }) {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -11,18 +13,38 @@ export default function Pastarecipe({ pasta }) {
 
   console.log(onePasta);
   return (
-    <div>
-      <h1>{onePasta.fields.title}</h1>
-      <img
-        src={onePasta.fields.image.fields.file.url}
-        style={{ width: "400px" }}
-        alt={onePasta.fields.title}
-      />
-      <ReactMarkdown>{onePasta.fields.ingredients}</ReactMarkdown>
-      <br />
-      <ReactMarkdown>{onePasta.fields.instructions}</ReactMarkdown>
-
-      <button onClick={() => navigate("/pasta")}>Show me all the pasta</button>
-    </div>
+    <>
+      <div className="recipe">
+        <h1 className="recipe-title">
+          {onePasta.fields.title}
+          {onePasta.fields.vegetarian ? (
+            <span className="recipe-vegetarian">(V)</span>
+          ) : (
+            ""
+          )}{" "}
+        </h1>
+        <img
+          src={onePasta.fields.image.fields.file.url}
+          style={{ width: "400px" }}
+          alt={onePasta.fields.title}
+          className="recipe-image"
+        />
+        <h3 className="main-title">Ingredients</h3>
+        <ReactMarkdown className="recipe-text">
+          {onePasta.fields.ingredients}
+        </ReactMarkdown>
+        <br />
+        <h3 className="main-title">Instructions</h3>
+        <ReactMarkdown className="recipe-text">
+          {onePasta.fields.instructions}
+        </ReactMarkdown>
+      </div>
+      <div className="bttn-container">
+        <h4 className="bttn-intro">Not quite what you were looking for?</h4>
+        <button className="nav-bttn" onClick={() => navigate("/pasta")}>
+          Go back to all pastas
+        </button>
+      </div>
+    </>
   );
 }

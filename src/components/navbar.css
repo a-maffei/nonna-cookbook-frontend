@@ -34,3 +34,28 @@
 .active {
   font-weight: 800;
 }
+
+@media (max-width: 850px) {
+  .navbar {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .navbar-links * {
+    margin-left: 3%;
+  }
+
+  .navbar-links {
+    margin-bottom: 1em;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  .navbar-title {
+    margin-top: 0.5em;
+  }
+}

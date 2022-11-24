@@ -24,44 +24,46 @@ export default function Homepage() {
           <FaPizzaSlice className="spinner rotate" />
         </span>
       </div>
-      <Link to="/starters" style={{ textDecoration: "none" }}>
-        <div className="homepage-cat-con">
-          <div className="homepage-cat-title-con">
-            <h2 className="homepage-cat-title">Starters</h2>
+      <div className="homepage-all-cat-con">
+        <Link to="/starters" style={{ textDecoration: "none" }}>
+          <div className="homepage-cat-con">
+            <div className="homepage-cat-title-con">
+              <h2 className="homepage-cat-title">Starters</h2>
+            </div>
+            <img
+              className="homepage-cat-image"
+              src={Starter}
+              style={{ width: "100%" }}
+            />
           </div>
-          <img
-            className="homepage-cat-image"
-            src={Starter}
-            style={{ width: "100%" }}
-          />
-        </div>
-      </Link>
+        </Link>
 
-      <Link to="/pasta" style={{ textDecoration: "none" }}>
-        <div className="homepage-cat-con">
-          <div className="homepage-cat-title-con">
-            <h2 className="homepage-cat-title">Pasta</h2>
+        <Link to="/pasta" style={{ textDecoration: "none" }}>
+          <div className="homepage-cat-con">
+            <div className="homepage-cat-title-con">
+              <h2 className="homepage-cat-title">Pasta</h2>
+            </div>
+            <img
+              className="homepage-cat-image"
+              src={Pasta}
+              style={{ width: "100%" }}
+            />
           </div>
-          <img
-            className="homepage-cat-image"
-            src={Pasta}
-            style={{ width: "100%" }}
-          />
-        </div>
-      </Link>
+        </Link>
 
-      <Link to="/dessert" style={{ textDecoration: "none" }}>
-        <div className="homepage-cat-con">
-          <div className="homepage-cat-title-con">
-            <h2 className="homepage-cat-title">Dessert</h2>
+        <Link to="/dessert" style={{ textDecoration: "none" }}>
+          <div className="homepage-cat-con">
+            <div className="homepage-cat-title-con">
+              <h2 className="homepage-cat-title">Dessert</h2>
+            </div>
+            <img
+              src={Dessert}
+              style={{ width: "100%" }}
+              className="homepage-cat-image"
+            />
           </div>
-          <img
-            src={Dessert}
-            style={{ width: "100%" }}
-            className="homepage-cat-image"
-          />
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 }
