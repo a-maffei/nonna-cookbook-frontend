@@ -15,7 +15,6 @@ import ErrorPage from "./components/ErrorPage";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
-  const [search, setSearch] = useState([]);
 
   // Data fetching
 
