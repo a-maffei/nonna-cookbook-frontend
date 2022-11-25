@@ -33,7 +33,7 @@ export default function Navbar() {
           Pasta
         </NavLink>
         <NavLink
-          to="/desserts"
+          to="/dessert"
           activeStyle={{
             fontWeight: "bold",
           }}

@@ -50,14 +50,14 @@ function App() {
         <Route path="/" element={<Homepage recipes={recipes} />} />
         <Route path="/starters" element={<Starters starters={starters} />} />
         <Route path="/pasta" element={<Pasta pasta={pasta} />} />
-        <Route path="/desserts" element={<Dessert dessert={dessert} />} />
+        <Route path="/dessert" element={<Dessert dessert={dessert} />} />
         <Route
           path="/starters/:id"
           element={<Startersrecipe starters={starters} />}
         />
         <Route path="/pasta/:id" element={<Pastarecipe pasta={pasta} />} />
         <Route
-          path="/desserts/:id"
+          path="/dessert/:id"
           element={<Dessertsrecipe dessert={dessert} />}
         />
         <Route path="*" element={<ErrorPage />} />

@@ -5,6 +5,7 @@ import Dessert from "../images/dessert.jpg";
 import Cloth from "../images/tablecloth.jpg";
 import { Link } from "react-router-dom";
 import "./homepage.css";
+import "./category.css";
 import { FaPizzaSlice } from "react-icons/fa";
 import { useState, useEffect } from "react";
 export default function Homepage({ recipes }) {
@@ -54,14 +55,29 @@ export default function Homepage({ recipes }) {
           </button>
         </form>
         {inputText.length === 0 ? (
-          <div>
+          <div className="homepage-results-container">
             {matchingRecipes.map((recipe) => (
-              <Link
-                to={`/${recipe.fields.type}/${recipe.fields.nameId}`}
-                style={{ textDecoration: "none" }}
-              >
-                <h1>{recipe.fields.title}</h1>
-              </Link>
+              <div className="homepage-recipe-container">
+                <Link
+                  to={`/${recipe.fields.type}/${recipe.fields.nameId}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <h3 className="homepage-recipe-title">
+                    {recipe.fields.title}
+                  </h3>
+                  <div className="homepage-recipe-cont">
+                    <img
+                      src={recipe.fields.image.fields.file.url}
+                      className="homepage-recipe-img"
+                    />
+                    <div className="homepage-recipe-overlay">
+                      <p className="homepage-recipe-overlay-text">
+                        Discover the recipe
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
             ))}
           </div>
         ) : (
@@ -111,7 +127,7 @@ export default function Homepage({ recipes }) {
             </div>
           </Link>
 
-          <Link to="/desserts" style={{ textDecoration: "none" }}>
+          <Link to="/dessert" style={{ textDecoration: "none" }}>
             <div className="homepage-cat-con">
               <div className="homepage-cat-title-con">
                 <h2 className="homepage-cat-title">Desserts</h2>
