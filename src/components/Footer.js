@@ -14,7 +14,7 @@ export default function Footer() {
         <input
           className="footer-input"
           type="text"
-          placeholder="your e-mail adress"
+          placeholder="Your e-mail adress"
         />
         <button className="footer-button">
           <ImNewspaper />

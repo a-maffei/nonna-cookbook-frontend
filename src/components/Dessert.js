@@ -22,7 +22,7 @@ export default function Dessert({ dessert }) {
             dessert.map((recipe, key) => (
               <div className="category-recipe-container" key={key}>
                 <Link
-                  to={`/desserts/${recipe.fields.nameId}`}
+                  to={`/dessert/${recipe.fields.nameId}`}
                   style={{ textDecoration: "none" }}
                 >
                   <h3 className="category-recipe-title">
