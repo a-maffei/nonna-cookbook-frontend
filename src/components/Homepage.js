@@ -81,7 +81,7 @@ export default function Homepage({ recipes }) {
             ))}
           </div>
         ) : (
-          <></>
+          <div className="homepage-no-results-container"></div>
         )}
         <div className="homepage-pizzas">
           <span className="homepage-icon">
