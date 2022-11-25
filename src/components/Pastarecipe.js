@@ -38,12 +38,12 @@ export default function Pastarecipe({ pasta }) {
             alt={onePasta.fields.title}
             className="recipe-image"
           />
-          <h3 className="main-title">Ingredients</h3>
+          <h3 className="main-title ingredients">Ingredients</h3>
           <ReactMarkdown className="recipe-text">
             {onePasta.fields.ingredients}
           </ReactMarkdown>
           <br />
-          <h3 className="main-title">Instructions</h3>
+          <h3 className="main-title instructions">Instructions</h3>
           <ReactMarkdown className="recipe-text">
             {onePasta.fields.instructions}
           </ReactMarkdown>

@@ -19,6 +19,9 @@ export default function ErrorPage() {
       <div className="error">
         <h2 className="main-title">Are you lost?</h2>
         <p className="main-subtitle">
+          {" "}
+          We can't find the page you're looking for!
+          <br></br>
           Keep calm, good things take patience. Go back to our homepage and
           start from there.
         </p>

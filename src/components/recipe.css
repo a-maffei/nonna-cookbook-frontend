@@ -46,3 +46,8 @@
   color: #9a0101;
   margin-left: 2%;
 }
+
+.ingredients,
+.instructions {
+  margin-bottom: 2em !important;
+}

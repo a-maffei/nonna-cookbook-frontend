@@ -43,7 +43,7 @@ export default function Dessertsrecipe({ dessert }) {
         </div>
         <div className="bttn-container">
           <h4 className="bttn-intro">Not quite what you were looking for?</h4>
-          <button className="nav-bttn" onClick={() => navigate("/desserts")}>
+          <button className="nav-bttn" onClick={() => navigate("/dessert")}>
             Go back to all desserts
           </button>
         </div>
