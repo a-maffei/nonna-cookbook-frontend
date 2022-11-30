@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 export default function Homepage({ recipes }) {
   const [inputText, setInputText] = useState("");
   const [matchingRecipes, setMatchingRecipes] = useState([]);
+  const [randomRecipe, setRandomRecipe] = useState([]);
   const [query, setQuery] = useState("");
 
   const inputHandler = (e, query) => {
@@ -23,6 +24,13 @@ export default function Homepage({ recipes }) {
     );
     console.log(matchingRecipes);
     setInputText("");
+    return setRandomRecipe([]);
+  };
+
+  const randomRecipeHandler = () => {
+    setRandomRecipe(recipes[Math.floor(Math.random() * 18) + 1]);
+    setMatchingRecipes([]);
+    return console.log(randomRecipe);
   };
 
   return (
@@ -33,27 +41,67 @@ export default function Homepage({ recipes }) {
       <div className="homepage">
         <h2 className="main-title">What would you like to cook today?</h2>
         <p className="main-subtitle">
-          Browse through Nonna's favorite recipes and get inspired.{" "}
+          We can help you cook all your favorite Italian dishes. <br></br>Search
+          through our recipes—or click on Nonna's emoji, and we'll pick a random
+          one for you.{" "}
         </p>
-        <form
-          onSubmit={(e) => {
-            inputHandler(e, query);
-          }}
-        >
-          <input
-            className="homepage-searchbar"
-            type="text"
-            value={inputText}
-            onChange={(e) => {
-              setInputText(e.target.value);
-              setQuery(e.target.value);
-              return console.log(query);
+        <div className="homepage-browse-container">
+          <form
+            onSubmit={(e) => {
+              inputHandler(e, query);
             }}
-          ></input>
-          <button className="homepage-button" type="submit">
-            Search
+          >
+            <input
+              className="homepage-searchbar"
+              type="text"
+              value={inputText}
+              onChange={(e) => {
+                setInputText(e.target.value);
+                setQuery(e.target.value);
+                return console.log(query);
+              }}
+            ></input>
+            <button className="homepage-button" type="submit">
+              Search
+            </button>
+          </form>
+          <button
+            className="homepage-button"
+            type="submit"
+            onClick={() => {
+              randomRecipeHandler();
+            }}
+          >
+            👵
           </button>
-        </form>
+        </div>
+        {randomRecipe.length !== 0 ? (
+          <div className="homepage-results-container">
+            <div className="homepage-recipe-container">
+              <Link
+                to={`/${randomRecipe.fields.type}/${randomRecipe.fields.nameId}`}
+                style={{ textDecoration: "none" }}
+              >
+                <h3 className="homepage-recipe-title">
+                  {randomRecipe.fields.title}
+                </h3>
+                <div className="homepage-recipe-cont">
+                  <img
+                    src={randomRecipe.fields.image.fields.file.url}
+                    className="homepage-recipe-img"
+                  />
+                  <div className="homepage-recipe-overlay">
+                    <p className="homepage-recipe-overlay-text">
+                      Discover the recipe
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        ) : (
+          <div className="homepage-no-results-container"></div>
+        )}
         {inputText.length === 0 ? (
           <div className="homepage-results-container">
             {matchingRecipes.map((recipe) => (
@@ -83,17 +131,7 @@ export default function Homepage({ recipes }) {
         ) : (
           <div className="homepage-no-results-container"></div>
         )}
-        <div className="homepage-pizzas">
-          <span className="homepage-icon">
-            <FaPizzaSlice className="spinner rotate" />
-          </span>
-          <span className="homepage-icon">
-            <FaPizzaSlice className="spinner rotate" />
-          </span>
-          <span className="homepage-icon">
-            <FaPizzaSlice className="spinner rotate" />
-          </span>
-        </div>
+        <h2 className="main-title">Nonna's Menu</h2>
         <div className="homepage-all-cat-con">
           <Link to="/starters" style={{ textDecoration: "none" }}>
             <div className="homepage-cat-con">
