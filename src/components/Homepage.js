@@ -28,7 +28,7 @@ export default function Homepage({ recipes }) {
   };
 
   const randomRecipeHandler = () => {
-    setRandomRecipe(recipes[Math.floor(Math.random() * 18) + 1]);
+    setRandomRecipe(recipes[Math.floor(Math.random() * 18)]);
     setMatchingRecipes([]);
     return console.log(randomRecipe);
   };
@@ -41,7 +41,7 @@ export default function Homepage({ recipes }) {
       <div className="homepage">
         <h2 className="main-title">What would you like to cook today?</h2>
         <p className="main-subtitle">
-          We can help you cook all your favorite Italian dishes. <br></br>Search
+          We help you cook all your favorite Italian dishes. <br></br>Search
           through our recipes—or click on Nonna's emoji, and we'll pick a random
           one for you.{" "}
         </p>
@@ -131,10 +131,9 @@ export default function Homepage({ recipes }) {
         ) : (
           <div className="homepage-no-results-container"></div>
         )}
-        <h2 className="main-title">Nonna's Menu</h2>
         <div className="homepage-all-cat-con">
-          <Link to="/starters" style={{ textDecoration: "none" }}>
-            <div className="homepage-cat-con">
+          <div className="homepage-cat-con">
+            <Link to="/starters" style={{ textDecoration: "none" }}>
               <div className="homepage-cat-title-con">
                 <h2 className="homepage-cat-title">Starters</h2>
               </div>
@@ -146,11 +145,11 @@ export default function Homepage({ recipes }) {
                   </p>
                 </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
-          <Link to="/pasta" style={{ textDecoration: "none" }}>
-            <div className="homepage-cat-con">
+          <div className="homepage-cat-con">
+            <Link to="/pasta" style={{ textDecoration: "none" }}>
               <div className="homepage-cat-title-con">
                 <h2 className="homepage-cat-title">Pasta</h2>
               </div>
@@ -162,11 +161,11 @@ export default function Homepage({ recipes }) {
                   </p>
                 </div>
               </div>{" "}
-            </div>
-          </Link>
+            </Link>
+          </div>
 
-          <Link to="/dessert" style={{ textDecoration: "none" }}>
-            <div className="homepage-cat-con">
+          <div className="homepage-cat-con">
+            <Link to="/dessert" style={{ textDecoration: "none" }}>
               <div className="homepage-cat-title-con">
                 <h2 className="homepage-cat-title">Desserts</h2>
               </div>
@@ -178,8 +177,8 @@ export default function Homepage({ recipes }) {
                   </p>
                 </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
