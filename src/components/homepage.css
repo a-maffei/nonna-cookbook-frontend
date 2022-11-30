@@ -6,19 +6,27 @@
 }
 
 .main-title {
-  margin-top: 0;
-  padding-top: 1em;
+  margin: 0.5em auto;
+  font-size: 2em;
 }
 
 .main-subtitle {
-  margin-bottom: 0.8em;
+  margin: 0 auto 1.5em;
+  width: 70%;
+  line-height: 1.7;
+}
+
+.homepage-browse-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 60%;
 }
 
 form {
-  width: 40%;
-  margin: 1.3em auto 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  width: 50%;
 }
 
 .homepage-results-container {
@@ -30,21 +38,21 @@ form {
 }
 
 .homepage-no-results-container {
-  margin: 2em auto;
+  margin: 2.8em auto;
 }
 
 .homepage-searchbar {
   display: block;
   padding: 1.5%;
-  width: 60%;
+  width: 100%;
   border: #303841 1px solid;
 }
 
 .homepage-button {
   display: block;
-  padding: 1.5%;
-  color: #d3d6db;
+  padding: 0.5em 1em;
   background-color: #303841;
+  color: #f1f1f1;
   border: none;
   margin-left: 1%;
   border-radius: 5px;
@@ -117,7 +125,7 @@ form {
   flex-direction: column;
   width: 50%;
   margin: 2% auto 0;
-  border: #9a0101 1px solid;
+  border: #9a0101 1px dotted;
   padding: 1% 2%;
 }
 
@@ -126,7 +134,7 @@ form {
 .homepage-cat-title:link,
 .homepage-cat-title:hover {
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.8em;
   cursor: pointer;
   font-family: "Pacifico", cursive;
   color: #9a0101;
