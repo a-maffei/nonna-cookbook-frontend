@@ -55,6 +55,7 @@ export default function Homepage({ recipes }) {
               className="homepage-searchbar"
               type="text"
               value={inputText}
+              placeholder="explore our recepies"
               onChange={(e) => {
                 setInputText(e.target.value);
                 setQuery(e.target.value);

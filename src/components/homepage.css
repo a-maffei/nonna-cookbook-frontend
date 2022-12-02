@@ -46,6 +46,7 @@ form {
   padding: 1.5%;
   width: 100%;
   border: #303841 1px solid;
+  border-radius: 20px;
 }
 
 .homepage-button {
@@ -57,6 +58,7 @@ form {
   margin-left: 1%;
   border-radius: 5px;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 .homepage-recipe-container {
