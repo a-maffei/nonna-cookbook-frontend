@@ -93,7 +93,7 @@ export default function Homepage({ recipes }) {
               className="homepage-searchbar"
               type="text"
               value={inputText}
-              placeholder="explore our recepies"
+              placeholder="Explore our recipes"
               onChange={(e) => {
                 setSearchError(null);
                 setInputText(e.target.value);
