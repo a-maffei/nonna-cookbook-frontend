@@ -47,7 +47,15 @@
   margin-left: 2%;
 }
 
-.ingredients,
-.instructions {
-  margin-bottom: 2em !important;
+h4 {
+  text-align: center;
+  color: #303841;
+  font-family: "Pacifico", cursive;
+  margin: 2% auto;
+}
+
+.recipe-social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
