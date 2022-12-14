@@ -15,7 +15,7 @@ export default function Pasta({ pasta }) {
       <div className="category-macro-container">
         {" "}
         <h2 className="category-title">Pasta</h2>
-        <p>
+        <p className="category-subtitle">
           Nonna says your friends will love you even more if you cook them one
           of these.
         </p>

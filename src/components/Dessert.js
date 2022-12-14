@@ -14,7 +14,7 @@ export default function Dessert({ dessert }) {
       {" "}
       <div className="category-macro-container">
         <h2 className="category-title">Desserts</h2>
-        <p>
+        <p className="category-subtitle">
           Nonna says it's totally healthy to have one of these after every meal.
         </p>
         <div className="category-container">

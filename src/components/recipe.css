@@ -28,7 +28,7 @@
 }
 
 .recipe-text {
-  line-height: 1.8;
+  line-height: 1.5;
   width: 80%;
   margin: 0 auto;
   color: #303841;
@@ -58,6 +58,10 @@ h4 {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+h4 {
+  margin-top: 2em;
 }
 
 @media (max-width: 1000px) {

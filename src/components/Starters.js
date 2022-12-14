@@ -17,7 +17,9 @@ export default function Starters({ starters }) {
       {" "}
       <div className="category-macro-container">
         <h2 className="category-title">Starters</h2>
-        <p>Nonna says you'll be needing a lot of cooking oil.</p>
+        <p className="category-subtitle">
+          Nonna says you'll be needing a lot of cooking oil.
+        </p>
         <div className="category-container">
           {starters &&
             starters.map((recipe, key) => (
