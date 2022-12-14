@@ -184,6 +184,8 @@ form {
   color: #f1f1f1;
   font-weight: lighter;
   width: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .homepage-overlay-text {
@@ -191,6 +193,7 @@ form {
   color: #f1f1f1;
   font-weight: lighter;
   width: 80%;
+  text-align: center;
 }
 
 .homepage-pizzas {

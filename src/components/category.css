@@ -14,7 +14,7 @@ h2 {
   padding: 0.5em;
 }
 
-p {
+.category-subtitle {
   color: #303841;
   text-align: center;
   margin-bottom: 3em;
@@ -94,6 +94,7 @@ p {
   color: #f1f1f1;
   font-weight: lighter;
   width: 80%;
+  text-align: center;
 }
 
 @media (max-width: 1250px) {
