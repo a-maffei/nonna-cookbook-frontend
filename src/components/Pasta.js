@@ -24,18 +24,12 @@ export default function Pasta({ pasta }) {
             pasta.map((recipe, key) => (
               <div className="category-recipe-container" key={key}>
                 <Link
-                  to={`/pasta/${recipe.fields.nameId}`}
+                  to={`/pasta/${recipe.nameid}`}
                   style={{ textDecoration: "none" }}
                 >
-                  <h3 className="category-recipe-title">
-                    {" "}
-                    {recipe.fields.title}{" "}
-                  </h3>
+                  <h3 className="category-recipe-title"> {recipe.title} </h3>
                   <div className="category-overlay-cont">
-                    <img
-                      src={recipe.fields.image.fields.file.url}
-                      className="category-recipe-img"
-                    />
+                    <img src={recipe.image} className="category-recipe-img" />
                     <div className="category-overlay">
                       <p className="category-overlay-text">
                         Discover the recipe

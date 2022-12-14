@@ -80,15 +80,13 @@ export default function Homepage({ recipes }) {
           <div className="homepage-results-container">
             <div className="homepage-recipe-container">
               <Link
-                to={`/${randomRecipe.fields.type}/${randomRecipe.fields.nameId}`}
+                to={`/${randomRecipe.type}/${randomRecipe.nameId}`}
                 style={{ textDecoration: "none" }}
               >
-                <h3 className="homepage-recipe-title">
-                  {randomRecipe.fields.title}
-                </h3>
+                <h3 className="homepage-recipe-title">{randomRecipe.title}</h3>
                 <div className="homepage-recipe-cont">
                   <img
-                    src={randomRecipe.fields.image.fields.file.url}
+                    src={randomRecipe.image}
                     className="homepage-recipe-img"
                   />
                   <div className="homepage-recipe-overlay">
@@ -108,17 +106,12 @@ export default function Homepage({ recipes }) {
             {matchingRecipes.map((recipe) => (
               <div className="homepage-recipe-container">
                 <Link
-                  to={`/${recipe.fields.type}/${recipe.fields.nameId}`}
+                  to={`/${recipe.type}/${recipe.nameId}`}
                   style={{ textDecoration: "none" }}
                 >
-                  <h3 className="homepage-recipe-title">
-                    {recipe.fields.title}
-                  </h3>
+                  <h3 className="homepage-recipe-title">{recipe.title}</h3>
                   <div className="homepage-recipe-cont">
-                    <img
-                      src={recipe.fields.image.fields.file.url}
-                      className="homepage-recipe-img"
-                    />
+                    <img src={recipe.image} className="homepage-recipe-img" />
                     <div className="homepage-recipe-overlay">
                       <p className="homepage-recipe-overlay-text">
                         Discover the recipe
