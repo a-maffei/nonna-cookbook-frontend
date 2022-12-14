@@ -23,7 +23,7 @@ export default function Startersrecipe({ starters }) {
 
   console.log(id);
 
-  const oneStarter = starters.find((starter) => starter.fields.nameId === id);
+  const oneStarter = starters.find((starter) => starter.nameid === id);
 
   console.log(oneStarter);
   return (
@@ -38,27 +38,27 @@ export default function Startersrecipe({ starters }) {
       <div className="recipe-macro-container">
         <div className="recipe">
           <h1 className="recipe-title">
-            {oneStarter.fields.title}
-            {oneStarter.fields.vegetarian ? (
+            {oneStarter.title}
+            {oneStarter.vegetarian ? (
               <span className="recipe-vegetarian">(V)</span>
             ) : (
               ""
             )}{" "}
           </h1>
           <img
-            src={oneStarter.fields.image.fields.file.url}
+            src={oneStarter.image}
             style={{ width: "400px" }}
-            alt={oneStarter.fields.title}
+            alt={oneStarter.title}
             className="recipe-image"
           />
           <h3 className="main-title">Ingredients</h3>
           <ReactMarkdown className="recipe-text">
-            {oneStarter.fields.ingredients}
+            {oneStarter.ingredients}
           </ReactMarkdown>
           <br />
           <h3 className="main-title">Instructions</h3>
           <ReactMarkdown className="recipe-text">
-            {oneStarter.fields.instructions}
+            {oneStarter.instructions}
           </ReactMarkdown>
           <h4>Share the recipe</h4>
           <div className="recipe-social">

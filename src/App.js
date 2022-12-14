@@ -18,7 +18,7 @@ function App() {
 
   // Data fetching
 
-  function fetchRecipes() {
+  /* function fetchRecipes() {
     client
       .getEntries()
       .then((res) => {
@@ -27,20 +27,30 @@ function App() {
       })
       .catch((err) => console.log(err));
   }
+  */
 
-  useEffect(() => fetchRecipes, []);
+  const url = "http://localhost:8060/api/recipes";
+
+  const getData = () => {
+    fetch(url)
+      .then((data) => data.json())
+      .then((res) => {
+        console.log(res);
+        setRecipes(res);
+      });
+  };
+
+  useEffect(() => getData, []);
 
   // Arrays with recipe categories to pass as prop to the components (after routing)
 
-  const starters = recipes.filter(
-    (recipe) => recipe.fields.type === "starters"
-  );
+  const starters = recipes.filter((recipe) => recipe.type === "starters");
   console.log(starters);
 
-  const pasta = recipes.filter((recipe) => recipe.fields.type === "pasta");
+  const pasta = recipes.filter((recipe) => recipe.type === "pasta");
   console.log(pasta);
 
-  const dessert = recipes.filter((recipe) => recipe.fields.type === "dessert");
+  const dessert = recipes.filter((recipe) => recipe.type === "dessert");
   console.log(dessert);
 
   return (

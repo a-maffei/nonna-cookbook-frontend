@@ -22,7 +22,7 @@ export default function Pastarecipe({ pasta }) {
 
   console.log(id);
 
-  const onePasta = pasta.find((pasta) => pasta.fields.nameId === id);
+  const onePasta = pasta.find((pasta) => pasta.nameid === id);
 
   console.log(onePasta);
   return (
@@ -37,27 +37,27 @@ export default function Pastarecipe({ pasta }) {
       <div className="recipe-macro-container">
         <div className="recipe">
           <h1 className="recipe-title">
-            {onePasta.fields.title}
-            {onePasta.fields.vegetarian ? (
+            {onePasta.title}
+            {onePasta.vegetarian ? (
               <span className="recipe-vegetarian">(V)</span>
             ) : (
               ""
             )}{" "}
           </h1>
           <img
-            src={onePasta.fields.image.fields.file.url}
+            src={onePasta.image}
             style={{ width: "400px" }}
-            alt={onePasta.fields.title}
+            alt={onePasta.title}
             className="recipe-image"
           />
           <h3 className="main-title ingredients">Ingredients</h3>
           <ReactMarkdown className="recipe-text">
-            {onePasta.fields.ingredients}
+            {onePasta.ingredients}
           </ReactMarkdown>
           <br />
           <h3 className="main-title instructions">Instructions</h3>
           <ReactMarkdown className="recipe-text">
-            {onePasta.fields.instructions}
+            {onePasta.instructions}
           </ReactMarkdown>
 
           <h4>Share the recipe</h4>

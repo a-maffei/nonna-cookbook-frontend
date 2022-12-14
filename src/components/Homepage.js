@@ -114,6 +114,44 @@ export default function Homepage({ recipes }) {
             👵
           </button>
         </div>
+
+        {randomRecipe.length !== 0 ? (
+          <div className="homepage-results-container">
+            <div className="homepage-recipe-container">
+              <Link
+                to={`/${randomRecipe.type}/${randomRecipe.nameId}`}
+                style={{ textDecoration: "none" }}
+              >
+                <h3 className="homepage-recipe-title">{randomRecipe.title}</h3>
+                <div className="homepage-recipe-cont">
+                  <img
+                    src={randomRecipe.image}
+                    className="homepage-recipe-img"
+                  />
+                  <div className="homepage-recipe-overlay">
+                    <p className="homepage-recipe-overlay-text">
+                      Discover the recipe
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        ) : (
+          <div className="homepage-no-results-container"></div>
+        )}
+        {inputText.length === 0 ? (
+          <div className="homepage-results-container">
+            {matchingRecipes.map((recipe) => (
+              <div className="homepage-recipe-container">
+                <Link
+                  to={`/${recipe.type}/${recipe.nameId}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <h3 className="homepage-recipe-title">{recipe.title}</h3>
+                  <div className="homepage-recipe-cont">
+                    <img src={recipe.image} className="homepage-recipe-img" />
+
         <div className="homepage-results-container">
           <>
             {randomRecipe.length !== 0 ? (
@@ -130,6 +168,7 @@ export default function Homepage({ recipes }) {
                       src={randomRecipe.fields.image.fields.file.url}
                       className="homepage-recipe-img"
                     />
+
                     <div className="homepage-recipe-overlay">
                       <p className="homepage-recipe-overlay-text">
                         Discover the recipe

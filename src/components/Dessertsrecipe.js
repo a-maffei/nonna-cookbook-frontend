@@ -22,7 +22,7 @@ export default function Dessertsrecipe({ dessert }) {
 
   console.log(id);
 
-  const oneDessert = dessert.find((dessert) => dessert.fields.nameId === id);
+  const oneDessert = dessert.find((dessert) => dessert.nameid === id);
 
   console.log(oneDessert);
   return (
@@ -36,21 +36,21 @@ export default function Dessertsrecipe({ dessert }) {
     >
       <div className="recipe-macro-container">
         <div className="recipe">
-          <h1 className="recipe-title">{oneDessert.fields.title}</h1>
+          <h1 className="recipe-title">{oneDessert.title}</h1>
           <img
-            src={oneDessert.fields.image.fields.file.url}
+            src={oneDessert.image}
             style={{ width: "400px" }}
-            alt={oneDessert.fields.title}
+            alt={oneDessert.title}
             className="recipe-image"
           />
           <h3 className="main-title">Ingredients</h3>
           <ReactMarkdown className="recipe-text">
-            {oneDessert.fields.ingredients}
+            {oneDessert.ingredients}
           </ReactMarkdown>
           <br />
           <h3 className="main-title">Instructions</h3>
           <ReactMarkdown className="recipe-text">
-            {oneDessert.fields.instructions}
+            {oneDessert.instructions}
           </ReactMarkdown>
 
           <h4>Share the recipe</h4>
