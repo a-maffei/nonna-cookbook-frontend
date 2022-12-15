@@ -1,4 +1,97 @@
+.form-title {
+  text-align: center;
+  color: #303841;
+  font-family: "Pacifico", cursive;
+  margin: 2% auto;
+  font-size: 2.2em;
+}
+
+.form-subtitle {
+  font-size: 1.3em;
+  color: #303841;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  font-size: 1.5em;
+  padding-left: 2em;
+}
+
 .form-container {
-  display: flex;
-  direction: column;
+  width: 50%;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  border: 1px dotted #9a0101;
+  background-color: #d3d6db;
+  margin-bottom: 3em;
+}
+
+h5 {
+  display: block;
+  text-align: left;
+  margin: 1em 0 0.3em;
+}
+
+h6 {
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 300;
+  margin-right: 1%;
+}
+
+.form-text-input {
+  width: 70%;
+  font-size: 0.8em;
+  padding: 1%;
+  color: #303841;
+  font-weight: 300;
+}
+
+.form-text-radio {
+  margin-right: 2%;
+}
+
+.vegetarian {
+  margin: 0.8em 0 0.3em;
+}
+
+.vegetarian-text {
+  display: inline;
+  padding-right: 1em;
+}
+
+.textarea {
+  width: 70%;
+  font-size: 0.8em;
+  padding: 1%;
+  color: #303841;
+  font-weight: 300;
+}
+
+.form-nav-bttn {
+  color: white;
+  font-size: 1.2em;
+  border: 1px solid #303841;
+  background-color: #303841;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  margin: 1.5em auto;
+  padding: 0.8em;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.form-nav-bttn:hover {
+  color: #303841;
+  background-color: white;
+}
+
+.form-mssg {
+  margin: 0 auto;
+  width: 70%;
 }

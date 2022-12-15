@@ -1,21 +1,30 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./form.css";
 export default function Form() {
   const [title, setTitle] = useState("");
   const [nameid, setNameid] = useState("");
-  const [imageTemp, setImageTemp] = useState(null);
+  //const [imageTemp, setImageTemp] = useState(null);
   const [image, setImage] = useState(null);
   const [type, setType] = useState("");
   const [vegetarian, setVegetarian] = useState(false);
   const [ingredients, setIngredients] = useState("");
   const [instructions, setInstructions] = useState("");
+  const [formSent, setFormSent] = useState(false);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     if (imageTemp) {
       setImage(URL.createObjectURL(imageTemp));
       console.log(imageTemp);
     }
-  }, [imageTemp]);
+  }, [imageTemp]); */
+
+  /*   useEffect(() => {
+    if (imageTemp) {
+      let objectURL = URL.createObjectURL(imageTemp);
+      imageRef.current = objectURL;
+      setImage(imageRef.current);
+    }
+  }, [imageTemp]); */
 
   const formSubmission = {
     title,
@@ -50,6 +59,7 @@ export default function Form() {
     e.preventDefault();
     try {
       const { post, error } = await createPost(formSubmission);
+      setFormSent(true);
       if (error) throw error;
       console.log(post);
     } catch (err) {
@@ -65,16 +75,18 @@ export default function Form() {
   };
 
   return (
-    <fieldset>
-      <legend>
-        <h1>Share your recipe with nonna</h1>
-      </legend>
-      <form onSubmit={handleSubmit}>
-        <div className="form-container">
+    <div>
+      <h1 className="form-title">Upload your recipe</h1>
+      <p className="form-subtitle">
+        Release your inner nonna and share your recipe on our cookbook.
+      </p>
+      <form onSubmit={handleSubmit} return className="form-container">
+        <div className="form-input title">
           <label>
-            Recipe title:
+            <h5>Title</h5>
             <input
               type="text"
+              className="form-text-input"
               name="title"
               value={title}
               onChange={(e) => {
@@ -86,7 +98,8 @@ export default function Form() {
               }}
             />
           </label>
-          <label>
+        </div>
+        {/*           <label>
             Image:
             <input
               type="file"
@@ -97,60 +110,78 @@ export default function Form() {
                 setImageTemp(e.target.files[0]);
               }}
             ></input>
-          </label>
-          <div className="type">
-            Type:
-            <label>
-              Starters
-              <input
-                type="radio"
-                id="starters"
-                name="type"
-                value="starters"
-                onChange={(e) => setType(e.target.value)}
-              />
-            </label>
-            <label>
-              Pasta
-              <input
-                type="radio"
-                id="pasta"
-                name="type"
-                value="pasta"
-                onChange={(e) => setType(e.target.value)}
-              />
-            </label>
-            <label>
-              Dessert
-              <input
-                type="radio"
-                id="dessert"
-                name="type"
-                value="dessert"
-                onChange={(e) => setType(e.target.value)}
-              />
-            </label>
-          </div>
-          <div className="vegetarian">
-            <label>
-              vegetarian
-              <input
-                type="checkbox"
-                name="vegetarian"
-                value={vegetarian}
-                onChange={(e) => {
-                  if (e.target.checked) {
-                    setVegetarian(true);
-                  } else {
-                    setVegetarian(false);
-                  }
-                }}
-              />
-            </label>
-          </div>
+          </label> */}
+        <div className="form-input img">
           <label>
-            Ingredients:
+            <h5>Image link</h5>
+            <input
+              className="form-text-input"
+              type="text"
+              name="img"
+              accept="image/*"
+              onChange={(e) => setImage(e.target.value)}
+            ></input>
+          </label>
+        </div>
+        <div className="form-input type">
+          <h5>Type</h5>
+          <label>
+            <h6>Starters</h6>
+            <input
+              className="form-text-radio"
+              type="radio"
+              id="starters"
+              name="type"
+              value="starters"
+              onChange={(e) => setType(e.target.value)}
+            />
+          </label>
+          <label>
+            <h6>Pasta</h6>
+            <input
+              className="form-text-radio"
+              type="radio"
+              id="pasta"
+              name="type"
+              value="pasta"
+              onChange={(e) => setType(e.target.value)}
+            />
+          </label>
+          <label>
+            <h6>Dessert</h6>
+            <input
+              className="form-text-radio"
+              type="radio"
+              id="dessert"
+              name="type"
+              value="dessert"
+              onChange={(e) => setType(e.target.value)}
+            />
+          </label>
+        </div>
+        <div className="form-input vegetarian">
+          <label>
+            <h5 className="vegetarian-text">Vegetarian</h5>
+            <input
+              className="form-text-checkbox"
+              type="checkbox"
+              name="vegetarian"
+              value={vegetarian}
+              onChange={(e) => {
+                if (e.target.checked) {
+                  setVegetarian(true);
+                } else {
+                  setVegetarian(false);
+                }
+              }}
+            />
+          </label>
+        </div>
+        <div className="form-input  ingredients">
+          <label>
+            <h5>Ingredients</h5>
             <textarea
+              className="textarea"
               name="text"
               value={ingredients}
               onChange={(e) => {
@@ -158,18 +189,29 @@ export default function Form() {
               }}
             ></textarea>
           </label>
+        </div>
+        <div className="form-input ingredients">
           <label>
-            Instructions:
+            <h5>Instructions</h5>
             <textarea
+              className="textarea"
               name="text"
               value={instructions}
               onChange={(e) => setInstructions(e.target.value)}
             ></textarea>
           </label>
-
-          <button>Submit</button>
         </div>
+        <button className="form-nav-bttn">Submit</button>
       </form>
-    </fieldset>
+      {formSent && (
+        <div className="form-mssg">
+          <p>Well done! Nonna will review your recipe and share it soon.</p>
+          <img
+            src="https://www.elizabethminchilli.com/wp-content/uploads/2020/02/Nonna-1.jpeg"
+            style={{ width: "20%", margin: "0 auto" }}
+          ></img>
+        </div>
+      )}
+    </div>
   );
 }
