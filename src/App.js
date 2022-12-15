@@ -12,6 +12,7 @@ import Startersrecipe from "./components/Startersrecipe";
 import Pastarecipe from "./components/Pastarecipe";
 import Dessertsrecipe from "./components/Dessertsrecipe";
 import ErrorPage from "./components/ErrorPage";
+import Form from "./components/Form";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -61,6 +62,7 @@ function App() {
         <Route path="/starters" element={<Starters starters={starters} />} />
         <Route path="/pasta" element={<Pasta pasta={pasta} />} />
         <Route path="/dessert" element={<Dessert dessert={dessert} />} />
+        <Route path="/form" element={<Form recipes={recipes} />} />
         <Route
           path="/starters/:id"
           element={<Startersrecipe starters={starters} />}
