@@ -40,6 +40,14 @@ export default function Navbar() {
         >
           Dessert
         </NavLink>
+        <NavLink
+          to="/form"
+          activeStyle={{
+            fontWeight: "bold",
+          }}
+        >
+          UPLOAD
+        </NavLink>
       </div>
     </nav>
   );

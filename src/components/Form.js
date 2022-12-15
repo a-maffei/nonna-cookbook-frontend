@@ -1,51 +1,60 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import "./form.css";
 export default function Form() {
   const [title, setTitle] = useState("");
   const [nameid, setNameid] = useState("");
-  const [image, setImage] = useState("");
-  const [category, setCategory] = useState("");
+  const [imageTemp, setImageTemp] = useState(null);
+  const [image, setImage] = useState(null);
+  const [type, setType] = useState("");
   const [vegetarian, setVegetarian] = useState(false);
   const [ingredients, setIngredients] = useState("");
   const [instructions, setInstructions] = useState("");
+
+  useEffect(() => {
+    if (imageTemp) {
+      setImage(URL.createObjectURL(imageTemp));
+      console.log(imageTemp);
+    }
+  }, [imageTemp]);
 
   const formSubmission = {
     title,
     nameid,
     image,
-    category,
+    type,
     vegetarian,
     ingredients,
     instructions,
   };
 
   //function for handling the form submission
+
+  const createPost = async (formData) => {
+    try {
+      const res = await fetch("http://localhost:8060/api/recipes", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      });
+      if (!res.ok) throw new Error("Something went wrong");
+      const post = await res.json();
+      return { post };
+    } catch (error) {
+      return { error };
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { post, error } = await console.log(formSubmission);
+      const { post, error } = await createPost(formSubmission);
       if (error) throw error;
       console.log(post);
     } catch (err) {
       console.error(err);
     }
-
-    const createPost = async (formData) => {
-      try {
-        const res = await fetch("http://localhost:8060/api/recipes", {
-          method: "POST",
-          body: JSON.stringify(formData),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8",
-          },
-        });
-        if (!res.ok) throw new Error("Something went wrong");
-        const post = await res.json();
-        return { post };
-      } catch (error) {
-        return { error };
-      }
-    };
 
     //For uncontrollod components (try using these inside the createPost()'s object above, on line 14, like so: {name: e.target.elements.name.value}):
     // console.log(e.target.elements);
@@ -81,12 +90,13 @@ export default function Form() {
             Image:
             <input
               type="file"
-              id="file"
-              accept="image/jpeg , image/png , image/jpg"
-              name="image"
-              value={image}
-              onChange={(e) => setImage(e.target.value)}
-            />
+              name="img"
+              accept="image/*"
+              onChange={(e) => {
+                console.log(e.target.files);
+                setImageTemp(e.target.files[0]);
+              }}
+            ></input>
           </label>
           <div className="type">
             Type:
@@ -97,7 +107,7 @@ export default function Form() {
                 id="starters"
                 name="type"
                 value="starters"
-                onChange={(e) => setCategory(e.target.value)}
+                onChange={(e) => setType(e.target.value)}
               />
             </label>
             <label>
@@ -107,7 +117,7 @@ export default function Form() {
                 id="pasta"
                 name="type"
                 value="pasta"
-                onChange={(e) => setCategory(e.target.value)}
+                onChange={(e) => setType(e.target.value)}
               />
             </label>
             <label>
@@ -117,7 +127,7 @@ export default function Form() {
                 id="dessert"
                 name="type"
                 value="dessert"
-                onChange={(e) => setCategory(e.target.value)}
+                onChange={(e) => setType(e.target.value)}
               />
             </label>
           </div>
