@@ -27,7 +27,7 @@
   align-items: center;
   border: 1px dotted #9a0101;
   background-color: #d3d6db;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 h5 {
@@ -94,4 +94,18 @@ h6 {
 .form-mssg {
   margin: 0 auto;
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-img {
+  margin: 0 auto;
+  width: 20%;
+  margin-bottom: 1em;
+}
+
+.form-txt {
+  font-size: 1em;
+  padding-bottom: 1em;
 }

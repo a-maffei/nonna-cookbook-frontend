@@ -205,10 +205,12 @@ export default function Form() {
       </form>
       {formSent && (
         <div className="form-mssg">
-          <p>Well done! Nonna will review your recipe and share it soon.</p>
+          <p className="form-txt">
+            Well done! Nonna will review your recipe and share it soon.
+          </p>
           <img
             src="https://www.elizabethminchilli.com/wp-content/uploads/2020/02/Nonna-1.jpeg"
-            style={{ width: "20%", margin: "0 auto" }}
+            className="form-img"
           ></img>
         </div>
       )}
