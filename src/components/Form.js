@@ -1,15 +1,19 @@
 import { useState, useEffect, useRef } from "react";
+import axios from "axios";
 import "./form.css";
+
 export default function Form() {
   const [title, setTitle] = useState("");
   const [nameid, setNameid] = useState("");
   //const [imageTemp, setImageTemp] = useState(null);
-  const [image, setImage] = useState(null);
+  // const [image, setImage] = useState(null);
   const [type, setType] = useState("");
   const [vegetarian, setVegetarian] = useState(false);
   const [ingredients, setIngredients] = useState("");
   const [instructions, setInstructions] = useState("");
   const [formSent, setFormSent] = useState(false);
+  const [fileName, setFileName] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
 
   /*   useEffect(() => {
     if (imageTemp) {
@@ -26,17 +30,7 @@ export default function Form() {
     }
   }, [imageTemp]); */
 
-  const formSubmission = {
-    title,
-    nameid,
-    image,
-    type,
-    vegetarian,
-    ingredients,
-    instructions,
-  };
-
-  //function for handling the form submission
+  /*  //function for handling the form submission
 
   const createPost = async (formData) => {
     try {
@@ -64,15 +58,38 @@ export default function Form() {
       console.log(post);
     } catch (err) {
       console.error(err);
-    }
+    } */
 
-    //For uncontrollod components (try using these inside the createPost()'s object above, on line 14, like so: {name: e.target.elements.name.value}):
-    // console.log(e.target.elements);
-    // console.log(e.target.elements.name.value);
-    // console.log(e.target.elements.age.value);
-    // console.log(e.target.elements.text.value);
-    // console.log(e.target.elements.terms.checked);
+  const fileUploadHandler = (event) => {
+    event.preventDefault();
+    setFormSent(true);
+
+    let formData = new FormData();
+    formData.append("title", title);
+    formData.append("nameid", nameid);
+    formData.append("type", type);
+    formData.append("vegetarian", vegetarian);
+    formData.append("instructions", instructions);
+    formData.append("ingredients", ingredients);
+    formData.append("selectedFile", selectedFile);
+
+    axios
+      .post("http://localhost:8060/api/recipes", formData, {
+        headers: {
+          "Content-type": "multipart-formdata",
+        },
+      })
+      .then((res) => {
+        console.log(formData);
+      });
   };
+
+  //For uncontrollod components (try using these inside the createPost()'s object above, on line 14, like so: {name: e.target.elements.name.value}):
+  // console.log(e.target.elements);
+  // console.log(e.target.elements.name.value);
+  // console.log(e.target.elements.age.value);
+  // console.log(e.target.elements.text.value);
+  // console.log(e.target.elements.terms.checked);
 
   return (
     <div>
@@ -80,7 +97,14 @@ export default function Form() {
       <p className="form-subtitle">
         Release your inner nonna and share your recipe on our cookbook.
       </p>
-      <form onSubmit={handleSubmit} return className="form-container">
+      <form
+        onSubmit={fileUploadHandler}
+        return
+        className="form-container"
+        action="/stats"
+        encType="multipart/form-data"
+        method="post"
+      >
         <div className="form-input title">
           <label>
             <h5>Title</h5>
@@ -99,20 +123,19 @@ export default function Form() {
             />
           </label>
         </div>
-        {/*           <label>
-            Image:
-            <input
-              type="file"
-              name="img"
-              accept="image/*"
-              onChange={(e) => {
-                console.log(e.target.files);
-                setImageTemp(e.target.files[0]);
-              }}
-            ></input>
-          </label> */}
         <div className="form-input img">
           <label>
+            <h5>Image</h5>
+            <input
+              type="file"
+              accept="image/*"
+              className="form-control-file"
+              name="selectedFile"
+              onChange={(e) => setSelectedFile(e.target.files[0])}
+            ></input>
+          </label>
+        </div>
+        {/* <label>
             <h5>Image link</h5>
             <input
               className="form-text-input"
@@ -121,8 +144,7 @@ export default function Form() {
               accept="image/*"
               onChange={(e) => setImage(e.target.value)}
             ></input>
-          </label>
-        </div>
+          </label> */}
         <div className="form-input type">
           <h5>Type</h5>
           <label>
@@ -177,16 +199,14 @@ export default function Form() {
             />
           </label>
         </div>
-        <div className="form-input  ingredients">
+        <div className="form-input ingredients">
           <label>
             <h5>Ingredients</h5>
             <textarea
               className="textarea"
               name="text"
               value={ingredients}
-              onChange={(e) => {
-                setIngredients(e.target.value);
-              }}
+              onChange={(e) => setIngredients(e.target.value)}
             ></textarea>
           </label>
         </div>
