@@ -13,6 +13,8 @@ import Pastarecipe from "./components/Pastarecipe";
 import Dessertsrecipe from "./components/Dessertsrecipe";
 import ErrorPage from "./components/ErrorPage";
 import Form from "./components/Form";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -29,18 +31,19 @@ function App() {
       .catch((err) => console.log(err));
   }
   */
+  const { id } = useParams();
 
-  const url = "https://cookbook-project.onrender.com/api/recipes";
+  const url = `https://cookbook-project.onrender.com/api/recipes`;
 
-  const getData = () => {
-    fetch(url)
-      .then((data) => data.json())
-      .then((res) => {
-        console.log(res);
-        setRecipes(res);
-      });
+  const getData = async () => {
+    try {
+      const res = await axios.get(url);
+      console.log(res.data);
+      setRecipes(res.data);
+    } catch (error) {
+      console.error(error);
+    }
   };
-
   useEffect(() => getData, []);
 
   // Arrays with recipe categories to pass as prop to the components (after routing)
