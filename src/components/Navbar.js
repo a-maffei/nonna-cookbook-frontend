@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <NavLink to="/">
-        <h1 className="navbar-title">Nonna's mjau vau Cookbook</h1>
+        <h1 className="navbar-title">Nonna's Cookbook</h1>
       </NavLink>
       <div className="navbar-links">
         <NavLink
