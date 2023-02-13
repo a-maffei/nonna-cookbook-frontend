@@ -30,7 +30,7 @@ function App() {
   }
   */
 
-  const url = "http://localhost:8060/api/recipes";
+  const url = "https://cookbook-project.onrender.com/recipes";
 
   const getData = () => {
     fetch(url)
