@@ -74,7 +74,7 @@ export default function Form() {
     formData.append("selectedFile", selectedFile);
 
     axios
-      .post("https://cookbook-project.onrender.com/recipes", formData, {
+      .post("https://cookbook-project.onrender.com/api/recipes", formData, {
         headers: {
           "Content-type": "multipart-formdata",
         },
