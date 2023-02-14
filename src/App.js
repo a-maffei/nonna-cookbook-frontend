@@ -35,14 +35,21 @@ function App() {
 
   const url = `https://cookbook-project.onrender.com/api/recipes`;
 
-  const getData = async () => {
-    try {
-      const res = await axios.get(url);
-      console.log(res.data);
-      setRecipes(res.data);
-    } catch (error) {
-      console.error(error);
-    }
+  const getData = () => {
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((res) => {
+        console.log(res);
+        setRecipes(res);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   };
   useEffect(() => getData, []);
 
