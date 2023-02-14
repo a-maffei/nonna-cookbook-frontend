@@ -106,8 +106,20 @@ h2 {
 @media (max-width: 700px) {
   .category-container {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
   .category-recipe-container p {
     width: 70%;
+  }
+
+  .category-recipe-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .category-subtitle {
+    width: 70%;
+    margin: 0 auto;
+    line-height: 1.5;
   }
 }

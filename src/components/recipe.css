@@ -60,10 +60,6 @@ h4 {
   justify-content: center;
 }
 
-h4 {
-  margin-top: 2em;
-}
-
 @media (max-width: 1000px) {
   .recipe {
     width: 80%;
@@ -74,7 +70,11 @@ h4 {
     padding-top: 3%;
   }
 
-  h4 {
-    padding-top: 5%;
+  .recipe > h4 {
+    margin-top: 2em;
+  }
+
+  .recipe-title {
+    font-size: 2.5em;
   }
 }

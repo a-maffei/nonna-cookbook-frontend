@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import Cloth from "../images/tablecloth.jpg";
 import "./form.css";
 
 export default function Form() {
@@ -92,50 +93,58 @@ export default function Form() {
   // console.log(e.target.elements.terms.checked);
 
   return (
-    <div>
-      <h1 className="form-title">Upload your recipe</h1>
-      <p className="form-subtitle">
-        Release your inner nonna and share your recipe on our cookbook.
-      </p>
-      <form
-        onSubmit={fileUploadHandler}
-        return
-        className="form-container"
-        action="/stats"
-        encType="multipart/form-data"
-        method="post"
-      >
-        <div className="form-input title">
-          <label>
-            <h5>Title</h5>
-            <input
-              type="text"
-              className="form-text-input"
-              name="title"
-              value={title}
-              onChange={(e) => {
-                setTitle(e.target.value);
-                const lowerCase = e.target.value
-                  .replaceAll(" ", "-")
-                  .toLowerCase();
-                setNameid(lowerCase);
-              }}
-            />
-          </label>
-        </div>
-        <div className="form-input img">
-          <label>
-            <h5>Image</h5>
-            <input
-              type="file"
-              accept="image/*"
-              className="form-control-file"
-              name="selectedFile"
-              onChange={(e) => setSelectedFile(e.target.files[0])}
-            ></input>
-          </label>
-        </div>
-        {/* <label>
+    <div
+      className="background"
+      style={{
+        backgroundImage: `url(${Cloth})`,
+        backgroundRepeat: "repeat",
+        margin: 0,
+      }}
+    >
+      <div className="form-macro-container">
+        <h1 className="form-title">Upload your recipe</h1>
+        <p className="form-subtitle">
+          Release your inner nonna and share your recipe on our cookbook.
+        </p>
+        <form
+          onSubmit={fileUploadHandler}
+          return
+          className="form-container"
+          action="/stats"
+          encType="multipart/form-data"
+          method="post"
+        >
+          <div className="form-input title">
+            <label>
+              <h5>Title</h5>
+              <input
+                type="text"
+                className="form-text-input"
+                name="title"
+                value={title}
+                onChange={(e) => {
+                  setTitle(e.target.value);
+                  const lowerCase = e.target.value
+                    .replaceAll(" ", "-")
+                    .toLowerCase();
+                  setNameid(lowerCase);
+                }}
+              />
+            </label>
+          </div>
+          <div className="form-input img">
+            <label>
+              <h5>Image</h5>
+              <input
+                type="file"
+                accept="image/*"
+                className="form-control-file"
+                name="selectedFile"
+                onChange={(e) => setSelectedFile(e.target.files[0])}
+              ></input>
+            </label>
+          </div>
+          {/* <label>
             <h5>Image link</h5>
             <input
               className="form-text-input"
@@ -145,95 +154,96 @@ export default function Form() {
               onChange={(e) => setImage(e.target.value)}
             ></input>
           </label> */}
-        <div className="form-input type">
-          <h5>Type</h5>
-          <label>
-            <h6>Starters</h6>
-            <input
-              className="form-text-radio"
-              type="radio"
-              id="starters"
-              name="type"
-              value="starters"
-              onChange={(e) => setType(e.target.value)}
-            />
-          </label>
-          <label>
-            <h6>Pasta</h6>
-            <input
-              className="form-text-radio"
-              type="radio"
-              id="pasta"
-              name="type"
-              value="pasta"
-              onChange={(e) => setType(e.target.value)}
-            />
-          </label>
-          <label>
-            <h6>Dessert</h6>
-            <input
-              className="form-text-radio"
-              type="radio"
-              id="dessert"
-              name="type"
-              value="dessert"
-              onChange={(e) => setType(e.target.value)}
-            />
-          </label>
-        </div>
-        <div className="form-input vegetarian">
-          <label>
-            <h5 className="vegetarian-text">Vegetarian</h5>
-            <input
-              className="form-text-checkbox"
-              type="checkbox"
-              name="vegetarian"
-              value={vegetarian}
-              onChange={(e) => {
-                if (e.target.checked) {
-                  setVegetarian(true);
-                } else {
-                  setVegetarian(false);
-                }
-              }}
-            />
-          </label>
-        </div>
-        <div className="form-input ingredients">
-          <label>
-            <h5>Ingredients</h5>
-            <textarea
-              className="textarea"
-              name="text"
-              value={ingredients}
-              onChange={(e) => setIngredients(e.target.value)}
-            ></textarea>
-          </label>
-        </div>
-        <div className="form-input ingredients">
-          <label>
-            <h5>Instructions</h5>
-            <textarea
-              className="textarea"
-              name="text"
-              value={instructions}
-              onChange={(e) => setInstructions(e.target.value)}
-            ></textarea>
-          </label>
-        </div>
-        <button className="form-nav-bttn">Submit</button>
-      </form>
-      {formSent && (
-        <div className="form-mssg">
-          <p className="form-txt">
-            Well done! Nonna will review your recipe and share it soon.
-          </p>
-          <img
-            src="https://www.elizabethminchilli.com/wp-content/uploads/2020/02/Nonna-1.jpeg"
-            className="form-img"
-          ></img>
-        </div>
-      )}
+          <div className="form-input type">
+            <h5>Type</h5>
+            <label>
+              <h6>Starters</h6>
+              <input
+                className="form-text-radio"
+                type="radio"
+                id="starters"
+                name="type"
+                value="starters"
+                onChange={(e) => setType(e.target.value)}
+              />
+            </label>
+            <label>
+              <h6>Pasta</h6>
+              <input
+                className="form-text-radio"
+                type="radio"
+                id="pasta"
+                name="type"
+                value="pasta"
+                onChange={(e) => setType(e.target.value)}
+              />
+            </label>
+            <label>
+              <h6>Dessert</h6>
+              <input
+                className="form-text-radio"
+                type="radio"
+                id="dessert"
+                name="type"
+                value="dessert"
+                onChange={(e) => setType(e.target.value)}
+              />
+            </label>
+          </div>
+          <div className="form-input vegetarian">
+            <label>
+              <h5 className="vegetarian-text">Vegetarian</h5>
+              <input
+                className="form-text-checkbox"
+                type="checkbox"
+                name="vegetarian"
+                value={vegetarian}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setVegetarian(true);
+                  } else {
+                    setVegetarian(false);
+                  }
+                }}
+              />
+            </label>
+          </div>
+          <div className="form-input ingredients">
+            <label>
+              <h5>Ingredients</h5>
+              <textarea
+                className="textarea"
+                name="text"
+                value={ingredients}
+                onChange={(e) => setIngredients(e.target.value)}
+              ></textarea>
+            </label>
+          </div>
+          <div className="form-input ingredients">
+            <label>
+              <h5>Instructions</h5>
+              <textarea
+                className="textarea"
+                name="text"
+                value={instructions}
+                onChange={(e) => setInstructions(e.target.value)}
+              ></textarea>
+            </label>
+          </div>
+          <button className="form-nav-bttn">Submit</button>
+        </form>
+        {formSent && (
+          <div className="form-mssg">
+            <p className="form-txt">
+              Well done! Nonna will review your recipe and share it soon.
+            </p>
+            <img
+              src="https://www.elizabethminchilli.com/wp-content/uploads/2020/02/Nonna-1.jpeg"
+              className="form-img"
+            ></img>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

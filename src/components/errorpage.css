@@ -3,11 +3,33 @@
   background-color: white;
   margin: auto;
   padding: 0 0 4%;
+  padding: 2em 0;
+}
+
+.main-title-error {
+  margin: 0 auto 0.5em;
+  padding: 0;
+  font-size: 2em;
+  color: #303841;
+}
+
+.main-subtitle-error {
+  width: 70%;
+  line-height: 1.7;
+  text-align: center;
+  color: #303841;
+  margin: 0 auto;
 }
 
 .nonnas-image {
   width: 40%;
-  margin: 1em auto;
+  margin: 1em auto 1.5em;
   display: block;
   border-radius: 3%;
+}
+
+@media (max-width: 1000px) {
+  .nonnas-image {
+    width: 60%;
+  }
 }
