@@ -1,13 +1,35 @@
 import "./navbar.css";
 import { NavLink, Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const showNavbar = () => {
+    setIsClicked(!isClicked);
+  };
+
   return (
     <nav className="navbar">
-      <NavLink to="/">
-        <h1 className="navbar-title">Nonna's Cookbook</h1>
-      </NavLink>
-      <div className="navbar-links">
+      <div className="navbar-alwayson">
+        <NavLink to="/">
+          <h1 className="navbar-title">Nonna's Cookbook</h1>
+        </NavLink>
+        <div className="mobile-bttn-cont" onClick={showNavbar}>
+          {" "}
+          {isClicked ? (
+            <button className="nav-bttn">
+              <FaTimes />
+            </button>
+          ) : (
+            <button className="nav-bttn">
+              <FaBars />
+            </button>
+          )}
+        </div>
+      </div>
+      <div className={isClicked ? "navbar-links  visible-nav" : "navbar-links"}>
         <NavLink
           to="/"
           activeStyle={{
