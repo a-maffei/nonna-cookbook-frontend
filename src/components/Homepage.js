@@ -56,7 +56,7 @@ export default function Homepage({ recipes }) {
       <div className="homepage">
         <h2 className="main-title">What would you like to cook today?</h2>
         <p className="main-subtitle">
-          We help you cook all your favorite Italian dishes. Explore our
+          We help you cook all your favorite Italian dishes.<br></br>Explore our
           recipes—or click on Nonna's emoji, and we'll pick a random one for
           you.{" "}
         </p>

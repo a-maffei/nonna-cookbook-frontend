@@ -134,7 +134,14 @@
     padding: 1em 0;
   }
 
+  .navbar-alwayson {
+    margin-top: 1em;
+  }
+
   .navbar {
     padding: 1.5em;
+  }
+  .navbar-title {
+    font-size: 1.5em;
   }
 }
