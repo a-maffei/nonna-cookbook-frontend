@@ -48,8 +48,8 @@
 }
 
 .nav-bttn:hover {
-  color: #303841;
   background-color: transparent;
+  color: #d3d6db;
 }
 
 .mobile-bttn-cont {
@@ -130,7 +130,7 @@
   }
 
   .navbar-alwayson {
-    margin-top: 3em;
+    margin-top: 3.5em;
   }
 
   .navbar {
