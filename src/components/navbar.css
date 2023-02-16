@@ -121,21 +121,16 @@
     width: 100%;
     flex-wrap: wrap;
     gap: 0.5em;
-    padding: 0.5em 0;
-  }
-}
-
-@media (max-width: 300px) {
-  .navbar-links {
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 0.5em;
     margin-top: 1.5em;
     padding: 1em 0;
   }
 
+  .visible-nav {
+    top: -0.8em;
+  }
+
   .navbar-alwayson {
-    margin-top: 1em;
+    margin-top: 3em;
   }
 
   .navbar {
@@ -143,5 +138,9 @@
   }
   .navbar-title {
     font-size: 1.5em;
+  }
+
+  .nav-bttn {
+    height: 1.5em;
   }
 }
