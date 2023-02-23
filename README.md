@@ -33,7 +33,7 @@ Insert gif or link to demo
 
 - [Multer](https://www.npmjs.com/package/multer)
 - [React icons](https://react-icons.github.io/react-icons/search)
- - [FontAwesome](https://fontawesome.com/)
+- [FontAwesome](https://fontawesome.com/)
  
 
 
