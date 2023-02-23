@@ -19,11 +19,11 @@ export default function Navbar() {
         <div className="mobile-bttn-cont" onClick={showNavbar}>
           {" "}
           {isClicked ? (
-            <button className="nav-bttn">
+            <button className="nav-bttn-bar">
               <FaTimes />
             </button>
           ) : (
-            <button className="nav-bttn">
+            <button className="nav-bttn-bar">
               <FaBars />
             </button>
           )}

@@ -1,70 +1,63 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Nonna's Cookbook
 
-## Available Scripts
+A simple cookbook of traditional italian recipes was an opportunity to practice first-hand:
+- Building a Single Page Application using React
+- Implementing static and dynamic React routing
+- Building an API using PostgreSQL and ElephantsSQL
+- Fetching, displaying and updating data from the API
+- Using ReactHooks (useState, useEffect, useNavigate, useRef)
+- Implementing a searchbar
+- Building a form including text and media with Multer to post new recipes to the database
 
-In the project directory, you can run:
+➡ Check out [Nonna's Cookbook](https://askalocal.netlify.app/)
+## Tech Stack
 
-### `npm start`
+**[Client](https://github.com/a-maffei/nonna-cookbook-frontend):** React, CSS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**[Server](https://github.com/a-maffei/nonna-cookbook-backend):** Node.js, Express, PostgreSQL, ElephantsSQL
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Deployed with:** Netlify (client), Render (server)
+## Preview
 
-### `npm test`
+Insert gif or link to demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**The user can:** 
+- Browse through to recipe categories
+- Visit individual recipe pages
+- Share recipe via mail, Facebook, Twitter, WhatsApp
+- Search for recipes by name
+- Get inspired by clicking on a nonna emoji and receiving a random recipe from the database 👵🏻 
+- Post a new recipe (with picture) that will appear in the cookbook under the selected category
+## Acknowledgements
 
-### `npm run build`
+- [Multer](https://www.npmjs.com/package/multer)
+- [React icons](https://react-icons.github.io/react-icons/search)
+ - [FontAwesome](https://fontawesome.com/)
+ 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Authors
 
-### `npm run eject`
+- [@a-maffei](https://www.github.com/a-maffei)
+- [@macanjus](https://www.github.com/macanjus)
+- [@ahuzgb](https://www.github.com/ahuzgb)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Hi, I'm Alessandra! 👋
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 About Me
+I'm a full stack developer...
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## 🛠 Skills
+Javascript, HTML, CSS...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -55,16 +55,24 @@ export default function Dessertsrecipe({ dessert }) {
 
           <h4>Share the recipe</h4>
           <div className="recipe-social">
-            <EmailShareButton url={"https://youtu.be/xAf3SeP1Ucg"}>
+            <EmailShareButton
+              url={`https://nonnascookbook.netlify.app/${oneDessert.type}/${oneDessert.nameid}`}
+            >
               <EmailIcon round size={35} />
             </EmailShareButton>
-            <FacebookShareButton url={"https://youtu.be/xAf3SeP1Ucg"}>
+            <FacebookShareButton
+              url={`https://nonnascookbook.netlify.app/${oneDessert.type}/${oneDessert.nameid}`}
+            >
               <FacebookIcon round size={35} style={{ marginLeft: "0.3em" }} />
             </FacebookShareButton>
-            <TwitterShareButton url={"https://youtu.be/xAf3SeP1Ucg"}>
+            <TwitterShareButton
+              url={`https://nonnascookbook.netlify.app/${oneDessert.type}/${oneDessert.nameid}`}
+            >
               <TwitterIcon round size={35} style={{ marginLeft: "0.3em" }} />
             </TwitterShareButton>
-            <WhatsappShareButton url={"https://youtu.be/xAf3SeP1Ucg"}>
+            <WhatsappShareButton
+              url={`https://nonnascookbook.netlify.app/${oneDessert.type}/${oneDessert.nameid}`}
+            >
               <WhatsappIcon round size={35} style={{ marginLeft: "0.3em" }} />
             </WhatsappShareButton>
           </div>

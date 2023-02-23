@@ -34,7 +34,7 @@
   font-weight: 800;
 }
 
-.nav-bttn {
+.nav-bttn-bar {
   cursor: pointer;
   color: #d3d6db;
   border: none;
@@ -43,11 +43,11 @@
   height: 2em;
 }
 
-.nav-bttn > svg {
+.nav-bttn-bar > svg {
   margin: auto 0;
 }
 
-.nav-bttn:hover {
+.nav-bttn-bar:hover {
   background-color: transparent;
   color: #d3d6db;
 }
@@ -140,7 +140,7 @@
     font-size: 1.5em;
   }
 
-  .nav-bttn {
+  .nav-bttn-bar {
     height: 1.5em;
   }
 }

@@ -59,6 +59,11 @@ form {
   border-radius: 20px;
 }
 
+.homepage-button:hover {
+  background-color: #d3d6db;
+  color: #303841;
+}
+
 .homepage-recipe-container {
   display: flex;
   flex-direction: column;
