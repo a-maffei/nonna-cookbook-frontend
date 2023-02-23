@@ -1,7 +1,7 @@
 
 # Nonna's Cookbook
 
-A simple cookbook of traditional italian recipes was an opportunity to practice first-hand:
+A simple cookbook of traditional italian recipes as an opportunity to practice first-hand:
 - Building a Single Page Application using React
 - Implementing static and dynamic React routing
 - Building an API using PostgreSQL and ElephantsSQL
@@ -43,21 +43,3 @@ Insert gif or link to demo
 - [@a-maffei](https://www.github.com/a-maffei)
 - [@macanjus](https://www.github.com/macanjus)
 - [@ahuzgb](https://www.github.com/ahuzgb)
-
-
-# Hi, I'm Alessandra! 👋
-
-
-## 🚀 About Me
-I'm a full stack developer...
-
-
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
-
-
-## 🛠 Skills
-Javascript, HTML, CSS...
-
