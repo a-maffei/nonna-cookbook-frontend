@@ -10,7 +10,7 @@ A simple cookbook of traditional italian recipes as an opportunity to practice a
 - Implementing search
 - Building a form including text and media with Multer to post new recipes to the database
 
-➡ Check out [Nonna's Cookbook](https://askalocal.netlify.app/)
+➡ Check out [Nonna's Cookbook](https://nonnascookbook.netlify.app/)
 ## Tech Stack
 
 **[Client](https://github.com/a-maffei/nonna-cookbook-frontend):** React, CSS
